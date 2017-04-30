@@ -19,10 +19,9 @@ printMenu();
     <?php
     if (isset($_REQUEST['task']) && is_numeric($_REQUEST['task']))
         if (file_exists("Oppgave" . $_REQUEST['task'] . ".php")){
-            include "Oppgave" . $_REQUEST['task'] . ".php";
-            printContent();
+            http_redirect("Oppgave" . $_REQUEST['task'] . ".php");
         } else {
-            http_redirect();
+            echo "404 page not font :(";
         }
     else{
         echo "Velkommen til OLE006 sitt løsningsforslag av den obligatoriske oppgave nr 3";
