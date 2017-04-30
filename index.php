@@ -1,3 +1,13 @@
+<?php
+if (isset($_REQUEST['task']) && is_numeric($_REQUEST['task']))
+    if (file_exists("Oppgave" . $_REQUEST['task'] . ".php")){
+        header("Location: Oppgave" . $_REQUEST['task'] . ".php");
+        die();
+    } else {
+        echo "404 page not font :(";
+    }
+?>
+
 <!DOCTYPE>
 <HTML>
 <HEAD>
@@ -17,15 +27,8 @@ printMenu();
 <div id="main">
 
     <?php
-    if (isset($_REQUEST['task']) && is_numeric($_REQUEST['task']))
-        if (file_exists("Oppgave" . $_REQUEST['task'] . ".php")){
-            http_redirect("Oppgave" . $_REQUEST['task'] . ".php");
-        } else {
-            echo "404 page not font :(";
-        }
-    else{
-        echo "Velkommen til OLE006 sitt løsningsforslag av den obligatoriske oppgave nr 3";
-    }
+        echo "Hello and welcome to OLE006s solution to the third and final compulsory task! :D</br>";
+        echo "Please use the navigation-menu above to select the task</br>";
     ?>
 
 </div>
