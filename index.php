@@ -24,12 +24,14 @@ include 'menu.php';
 printMenu();
 ?>
 
-<div id="main1">
-
+<div id="main2">
+    <p>
     <?php
         echo "Hello and welcome to OLE006s solution to the third and final compulsory task! :D</br>";
+        echo "<br>";
         echo "Please use the navigation-menu above to select the task</br>";
     ?>
+    </p>
 
 </div>
 
