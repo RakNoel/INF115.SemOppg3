@@ -1,0 +1,15 @@
+body {
+    background-color: #ccc;
+}
+
+#main {
+    margin: auto;
+    margin-top: 50px;
+    width: 70%;
+}
+
+.header {
+    font-size: 4ch;
+    margin: auto;
+    width: 70%;
+}
