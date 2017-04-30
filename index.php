@@ -24,7 +24,7 @@ include 'menu.php';
 printMenu();
 ?>
 
-<div id="main">
+<div id="main1">
 
     <?php
         echo "Hello and welcome to OLE006s solution to the third and final compulsory task! :D</br>";

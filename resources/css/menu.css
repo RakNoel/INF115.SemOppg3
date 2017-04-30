@@ -21,7 +21,7 @@
     color:#333;
     text-decoration:none;
     font-weight:700;
-    font-size:12px;
+    font-size:16pt;
     line-height:32px;
     padding:0 15px;
     font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif
@@ -66,7 +66,8 @@
 #primary_nav_wrap ul ul a
 {
     line-height:120%;
-    padding:10px 15px
+    padding:10px 10px;
+    font-size:12pt;
 }
 
 #primary_nav_wrap ul ul ul

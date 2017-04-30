@@ -4,6 +4,7 @@
     <Title>Oppgave 2</Title>
     <link rel="stylesheet" href="resources/css/default.css">
     <link rel="stylesheet" href="resources/css/menu.css">
+    <script src="resources/scripts/oppg1.js"></script>
 </HEAD>
 
 <BODY>
@@ -14,14 +15,16 @@ printMenu();
 ?>
 
 <div id="main2">
-    <input type="text" placeholder="Name.."><br>
-    <input type="text" placeholder="Birthdate.."><br>
-    <input type="text" placeholder="Age.."><br>
 
+    <p>
+        Please fill inn form:
+    </p>
 
-    <?php
+    <input type="text" placeholder="Name.." id="name">
+    <input type="text" placeholder="Birthdate.. dd.mm.yyyy" id="date">
+    <input type="text" placeholder="Age.." id="age">
+    <input type="button" value="Submit" style="width: 100%;" id="sub" onclick="">
 
-    ?>
 
 </div>
 
