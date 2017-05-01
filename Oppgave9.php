@@ -3,13 +3,12 @@
  * Created by PhpStorm.
  * User: oskar
  * Date: 01.05.2017
- * Time: 15.22
+ * Time: 15.29
  */?>
-
 <!DOCTYPE>
 <HTML>
 <HEAD>
-    <Title>Oppgave 8</Title>
+    <Title>Oppgave 9</Title>
     <link rel="stylesheet" href="resources/css/default.css">
     <link rel="stylesheet" href="resources/css/menu.css">
     <link rel="stylesheet" href="resources/css/table.css">
@@ -34,36 +33,20 @@ printMenu();
     <div class="datagrid" style="width: 100%">
         <table>
             <thead>
-            <th>Department:</th>
-            <th>Manager:</th>
-            <th>Num employees:</th>
+            <th>Gender:</th>
+            <th>Number of employees:</th>
+            <th>Born in:</th>
             </thead>
 
             <tbody>
 
             <?php
-            //echo "Connected successfully";
             $serverQuery = '
-                SELECT
-                DEP.`dept_name` AS Department,
-                EMP.`first_name` AS FirstName,
-                EMP.`last_name` AS LastName,
-                COUNT(DEPEMP.`emp_no`) AS Employees
-            
-                FROM `departments` AS DEP
-            
-                INNER JOIN `dept_manager` AS MANAGER
-                ON MANAGER.`dept_no` = DEP.`dept_no`
-            
-                INNER JOIN `employees` AS EMP
-                ON EMP.`emp_no` = MANAGER.`emp_no`
-            
-                INNER JOIN `dept_emp` AS DEPEMP
-                ON DEPEMP.`dept_no` = DEP.`dept_no`
-            
-                WHERE MANAGER.`to_date` >= CURDATE()
-            
-                GROUP BY EMP.`emp_no`, DEP.`dept_no`;
+                SELECT `gender`, COUNT(`emp_no`) AS Number,
+                floor((YEAR(`birth_date`) / 10))*10 AS Decade
+                FROM `employees`
+                GROUP BY `gender`, Decade
+                ORDER BY `gender`
             ';
 
             $quarryRes = $conn->query($serverQuery);
@@ -75,9 +58,9 @@ printMenu();
                     } else {
                         echo "<tr class='alt'>";
                     }
-                    echo "<td>" . $row["Department"] . "</td>";
-                    echo "<td>" . $row["FirstName"]. " " . $row["LastName"] . "</td>";
-                    echo "<td>" . $row["Employees"] . "</td>";
+                    echo "<td>" . $row["gender"] . "</td>";
+                    echo "<td>" . $row["Number"]. "</td>";
+                    echo "<td>" . $row["Decade"] . "</td>";
 
                     echo "</tr>";
                 }
@@ -97,5 +80,6 @@ printMenu();
 
 </BODY>
 </HTML>
+
 
 
