@@ -27,7 +27,7 @@ printMenu();
 ?>
 
 <div id="main2">
-
+    <h1>Oppgave 2:</h1>
     <p id="prim">
 
         <?Php

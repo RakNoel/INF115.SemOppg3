@@ -23,6 +23,8 @@ printMenu();
 
 <div id="main2">
 
+    <h1>Oppgave 9:</h1>
+
     <?php
     include 'resources/scripts/serverVar.php';
 

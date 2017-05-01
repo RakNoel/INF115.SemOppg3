@@ -24,6 +24,8 @@ printMenu();
 
 <div id="main1">
 
+    <h1>Oppgave 7:</h1>
+
     <?php
     include 'resources/scripts/serverVar.php';
 

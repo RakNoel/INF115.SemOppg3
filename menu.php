@@ -15,8 +15,8 @@
 function printMenu()
 {
     echo "<div id='primary_nav_wrap'>";
-    echo "<ul><li><a href='index.php'><span>Hjem</span></a></li>";
-    echo "<li><a><span>Oppgaver</span></a>";
+    echo "<ul><li><a href='index.php'><span>Home</span></a></li>";
+    echo "<li><a><span>Tasks</span></a>";
     echo "<ul>";
 
     $dir = '.';

@@ -14,11 +14,12 @@ printMenu();
 ?>
 
 <div id="main2">
-<p>
-    <?php
+    <h1>Oppgave 1:</h1>
+    <p>
+        <?php
         echo "<b>" . "Good luck with the last compulsory!" . "</b>";
-    ?>
-</p>
+        ?>
+    </p>
 </div>
 
 </BODY>

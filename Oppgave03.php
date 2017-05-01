@@ -23,6 +23,7 @@ printMenu();
 ?>
 
 <div id="main2">
+    <h1>Oppgave 3:</h1>
     <p>
         Please select language:
     </p>

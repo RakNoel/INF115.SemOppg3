@@ -1,5 +1,12 @@
 body {
     background-color: #ccc;
+    font-family: Courier New, Courier, monospace;
+}
+
+h1 {
+    color: #4542af;
+    margin: auto;
+    width:100%;
 }
 
 #main1 {
@@ -18,7 +25,7 @@ body {
 #main2 p {
     color: #333333;
     font-family: Courier New, Courier, monospace;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 .header {
