@@ -4,7 +4,7 @@
  * User: oskar
  * Date: 01.05.2017
  * Time: 12.03
- */?>
+ */ ?>
 
 <!DOCTYPE>
 <HTML>
@@ -34,7 +34,6 @@ printMenu();
     <div class="datagrid" style="width: 100%">
         <table>
             <thead>
-            <th>Owner:</th>
             <th>Table:</th>
             </thead>
 
@@ -42,27 +41,26 @@ printMenu();
 
             <?php
             //echo "Connected successfully";
-            $serverQuery = 'SHOW TABLES IN ' . $dbName;
+            $serverQuery = 'SHOW TABLES FROM ' . $dbName;
 
             $quarryRes = $conn->query($serverQuery);
 
             if ($quarryRes->num_rows > 0) {
-                echo $quarryRes[0];
+                for ($i = 0; $i < $quarryRes->num_rows; $i++){
+                        $row = $quarryRes->fetch_row();
 
-                /*foreach ($quarryRes as $i => $row) {
-                    if ($i % 2 == 0) {
-                        echo "<tr>";
-                    } else {
-                        echo "<tr class='alt'>";
-                    }
-                    echo "<td>" . $row["Owner"] . "</td>";
-                    echo "<td>" . $row["table_name"] . "</td>";
+                        if($i % 2 == 0)
+                            echo "<tr>";
+                        else
+                            echo "<tr class='alt'>";
 
-                    echo "</tr>";
-                }*/
+                        echo "<td>" . $row[0] . "</td>";
+                        echo "</tr>";
+                }
+
             } else {
                 $conn->close();
-                die();
+                die("Empty table");
             }
 
 
