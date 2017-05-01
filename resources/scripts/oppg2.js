@@ -3,11 +3,13 @@
  */
 
 function checkCredentials() {
-    var age, name, year;
 
-    age = document.getElementById("age");
-    name = document.getElementById("name");
-    year = document.getElementById("year");
+    var age = document.getElementById("age");
+    var name = document.getElementById("name");
+    var year = document.getElementById("year");
+
+    var res = document.getElementById("response");
+    res.style.color = "red";
 
     var errorColor = "#ff6f6e";
     var okColor = "#FFF";
@@ -16,6 +18,7 @@ function checkCredentials() {
 
     if (age.value === '') {
         age.style.backgroundColor = errorColor;
+        res.innerHTML = "Age cannot be empty";
         retVal = false;
     } else {
         age.style.backgroundColor = okColor;
@@ -23,6 +26,7 @@ function checkCredentials() {
 
     if (name.value === '') {
         name.style.backgroundColor = errorColor;
+        res.innerHTML = "Name can not be empty";
         retVal = false;
     } else {
         name.style.backgroundColor = okColor;
@@ -30,6 +34,7 @@ function checkCredentials() {
 
     if (year.value === '') {
         year.style.backgroundColor = errorColor;
+        res.innerHTML = "Year can not be empty";
         retVal = false;
     } else {
         year.style.backgroundColor = okColor;
@@ -38,17 +43,19 @@ function checkCredentials() {
     var d = new Date();
     var thisYear = d.getFullYear();
 
-    //document.getElementById("prim").innerHTML = thisYear;
-
     var diff = thisYear - year.value;
     var diff2 = thisYear - year.value - 1;
 
-    if (diff == age.value || diff2 == (age.value)) {
+    if ((diff == age.value || diff2 == (age.value)) &&
+        (age.value >= 0 && age.value <= 100) &&
+        (year.value >= 1800 && year.value <= thisYear)
+    ) {
         age.style.backgroundColor = okColor;
         year.style.backgroundColor = okColor;
     } else {
         year.style.backgroundColor = errorColor;
         age.style.backgroundColor = errorColor;
+        res.innerHTML = "Age and year does not match, is out of bounds, or is empty";
         retVal = false;
     }
 
