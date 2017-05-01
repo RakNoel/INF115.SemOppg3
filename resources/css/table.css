@@ -15,10 +15,8 @@
     padding: 3px 10px;
 }
 .datagrid table thead th {
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #652299), color-stop(1, #4D1A75) );
-    background:-moz-linear-gradient( center top, #652299 5%, #4D1A75 100% );
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #652299), color-stop(1, #4D1A75) ) #652299;
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#652299', endColorstr='#4D1A75');
-    background-color:#652299;
     color:#FFFFFF;
     font-size: 15px;
     font-weight: bold;

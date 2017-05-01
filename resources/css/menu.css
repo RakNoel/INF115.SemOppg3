@@ -1,9 +1,8 @@
 #primary_nav_wrap
 {
     width: 70%;
-    margin: auto;
+    margin: 0 auto 40px;
     height: 10px;
-    margin-bottom: 40px;
 }
 
 #primary_nav_wrap ul
@@ -53,8 +52,7 @@
     left:0;
     background:#fff;
     padding:0;
-    border: solid;
-    border-color: #000;
+    border: solid black;
 }
 
 #primary_nav_wrap ul ul li
