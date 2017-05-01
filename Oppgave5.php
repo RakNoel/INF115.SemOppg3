@@ -3,13 +3,13 @@
  * Created by PhpStorm.
  * User: oskar
  * Date: 01.05.2017
- * Time: 11.21
+ * Time: 11.55
  */ ?>
 
 <!DOCTYPE>
 <HTML>
 <HEAD>
-    <Title>Oppgave 4</Title>
+    <Title>Oppgave 5</Title>
     <link rel="stylesheet" href="resources/css/default.css">
     <link rel="stylesheet" href="resources/css/menu.css">
     <link rel="stylesheet" href="resources/css/table.css">
@@ -22,27 +22,26 @@ include 'menu.php';
 printMenu();
 ?>
 
-<div id="main1">
-    <p>
-        <?php
-        include 'resources/scripts/serverVar.php';
+<div id="main2">
 
-        if ($conn->connect_error)
-            die("Connection failed: " . $conn->connect_error);
-        ?>
+    <?php
+    include 'resources/scripts/serverVar.php';
+
+    if ($conn->connect_error)
+        die("Connection failed: " . $conn->connect_error);
+    ?>
 
     <div class="datagrid" style="width: 100%">
         <table>
             <thead>
-            <th>First name</th>
-            <th>Last name</th>
+            <th>Title:</th>
             </thead>
 
             <tbody>
 
             <?php
             //echo "Connected successfully";
-            $serverQuery = 'SELECT `first_name`, `last_name` FROM `employees` ORDER BY `last_name`;';
+            $serverQuery = 'SELECT DISTINCT `title` FROM `titles`;';
 
             $quarryRes = $conn->query($serverQuery);
 
@@ -53,8 +52,8 @@ printMenu();
                     } else {
                         echo "<tr class='alt'>";
                     }
-                    echo "<td>" . $row["first_name"] . "</td>";
-                    echo "<td>" . $row["last_name"] . "</td>";
+                    echo "<td>" . $row["title"] . "</td>";
+
                     echo "</tr>";
                 }
             } else {
@@ -69,9 +68,6 @@ printMenu();
             </tbody>
         </table>
     </div>
-
-
-    </p>
 </div>
 
 </BODY>
