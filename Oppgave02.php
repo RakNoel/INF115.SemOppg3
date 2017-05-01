@@ -49,7 +49,7 @@ printMenu();
 
     <p id="response"></p>
 
-    <form action="Oppgave2.php" method="get" onsubmit="return checkCredentials()">
+    <form action="Oppgave02.php" method="get" onsubmit="return checkCredentials()">
         <input type="hidden" name="lang" value="<?php if (isset($_GET['lang'])) echo htmlspecialchars($_GET['lang']); ?>">
 
         <input type="text" placeholder="<?php echo $name ?>" id="name" name="name">

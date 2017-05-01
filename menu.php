@@ -26,7 +26,7 @@ function printMenu()
         foreach ($oppgaveListe as $value)
             if (substr($value, 0, 1) == "O")
                 echo "<li><a href='index.php?task="
-                    . (substr($value, 7, 1))
+                    . (substr($value, 7, 2))
                     . "'><span>" . "$value" . "</span></a></li>";
 
     echo "</ul></li></ul></div>";

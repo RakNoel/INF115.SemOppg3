@@ -26,7 +26,7 @@ printMenu();
     <p>
         Please select language:
     </p>
-    <form method="get" class="datagrid" action="Oppgave2.php" onsubmit="return radioCheck()" style="width: 100%;">
+    <form method="get" class="datagrid" action="Oppgave02.php" onsubmit="return radioCheck()" style="width: 100%;">
         <table>
             <tbody>
             <tr>
