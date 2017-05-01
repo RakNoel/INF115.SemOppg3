@@ -1,6 +1,6 @@
 <?php
 if (isset($_REQUEST['task']) && is_numeric($_REQUEST['task']))
-    if (file_exists("Oppgave" . $_REQUEST['task'] . ".php")){
+    if (file_exists("Oppgave" . $_REQUEST['task'] . ".php")) {
         header("Location: Oppgave" . $_REQUEST['task'] . ".php");
         die();
     } else {
@@ -26,12 +26,15 @@ printMenu();
 
 <div id="main2">
     <p>
-    <?php
-        echo "Hello and welcome to OLE006s solution to the third and final compulsory task! :D</br>";
-        echo "<br>";
-        echo "Please use the navigation-menu above to select the task</br>";
-    ?>
+        Hello lucky (or unlucky?) person who has been chosen to exmine my solution :D <br>
+        <br>
+        Here are a few things to get you started:
     </p>
+    <ul>
+        <li>First off I made a navigation menu at the top, thatone will follow you.</li>
+        <li>Secondly, I oriented the tasks as best as I could and hope you wont have to struggle too much navigating</li>
+        <li>Please enjoy this as much as I did creating it. Although, I probbably made it a mess for you <br><br>:/</li>
+    </ul>
 
 </div>
 
