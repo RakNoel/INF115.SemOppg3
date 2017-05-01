@@ -35,13 +35,14 @@ printMenu();
         <table>
             <thead>
             <th>Table:</th>
+            <th>Type:</th>
             </thead>
 
             <tbody>
 
             <?php
             //echo "Connected successfully";
-            $serverQuery = 'SHOW TABLES FROM ' . $dbName;
+            $serverQuery = 'SHOW FULL TABLES FROM ' . $dbName;
 
             $quarryRes = $conn->query($serverQuery);
 
@@ -55,6 +56,7 @@ printMenu();
                             echo "<tr class='alt'>";
 
                         echo "<td>" . $row[0] . "</td>";
+                        echo "<td>" . $row[1] . "</td>";
                         echo "</tr>";
                 }
 
