@@ -1,14 +1,10 @@
 <?php
 
 //Selects the language to use
-if (isset($_GET["lang"])) {
-    try {
-        include 'resources/lang/' . $_GET["lang"] . '.php';
-    }catch (Exception $e){
-        include 'resources/lang/no.php';
-    }
+if (isset($_GET["lang"]) && strlen($_GET["lang"]) == 2) {
+    include 'resources/lang/' . $_GET["lang"] . '.php';
 } else {
-    include 'resources/lang/no.php';
+    include 'resources/lang/en.php';
 }
 ?>
 
@@ -36,14 +32,16 @@ include 'menu.php';
         /**
          * checks if all fields are filled and validates their values. This is due to th fact that the
          * javascript is client side and therefore not trusted.
+         *
+         * Btw, the task never specifies what to do with the information AFTER the validation. so i chose
+         * just to print the name :D
          */
         if (isset($_GET["name"]) && isset($_GET["age"]) && isset($_GET["year"])) {
             if (date("Y") - $_GET["year"] == $_GET["age"] || date("Y") - $_GET["year"] == $_GET["age"] + 1
                 && $_GET["year"] < date("Y") && $_GET["year"] > 1800
                 && $_GET["age"] >= 0 && $_GET["age"] <= 100
             ) {
-                echo $hello . " " . $_GET["name"];
-                die();
+                echo "<p style='color: blue'>" . $hello . " " . $_GET["name"] . "</p>";
             } else {
                 echo $wrong_date;
             }
