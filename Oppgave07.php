@@ -19,7 +19,6 @@
 
 <?php
 include 'menu.php';
-printMenu();
 ?>
 
 <div id="main1">

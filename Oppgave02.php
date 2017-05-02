@@ -23,7 +23,6 @@ if (isset($_GET["lang"])) {
 
 <?php
 include 'menu.php';
-printMenu();
 ?>
 
 <div id="main2">
@@ -50,7 +49,7 @@ printMenu();
     <p id="response"></p>
 
     <form action="Oppgave02.php" method="get" onsubmit="return checkCredentials()">
-        <input type="hidden" name="lang" value="<?php if (isset($_GET['lang'])) echo htmlspecialchars($_GET['lang']); ?>">
+        <input type="hidden" name="lang" value="<?php if (isset($_GET['lang'])) echo ($_GET['lang']); ?>">
 
         <input type="text" placeholder="<?php echo $name ?>" id="name" name="name">
         <input type="number" placeholder="<?php echo $year ?>" id="year" name="year">
