@@ -6,6 +6,11 @@
  * Time: 10.46
  */
 
+
+/**
+ * This is the ENGLISH translation pack
+ */
+
 $hello = "Hi";
 $wrong_date = "Wrong date!";
 $fill_form = "Please fill inn form:";

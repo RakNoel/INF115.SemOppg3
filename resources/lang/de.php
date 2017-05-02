@@ -6,6 +6,10 @@
  * Time: 10.47
  */
 
+/**
+ * This is the GERMAN translation pack
+ */
+
 $hello = "Hallo";
 $wrong_date = "Falsches Datum";
 $fill_form = "Bitte füllen Sie das Formular:";

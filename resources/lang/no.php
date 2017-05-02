@@ -6,6 +6,11 @@
  * Time: 10.47
  */
 
+
+/**
+ * This is the NORWEGIAN translation pack
+ */
+
 $hello = "Hei";
 $wrong_date = "Feil dato";
 $fill_form = "Fyll ut skjema:";

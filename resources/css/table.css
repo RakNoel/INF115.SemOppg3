@@ -1,3 +1,11 @@
+/*
+    This stylesheet holds the style for the TABLE.
+
+    note to self:
+    > place table inside div
+    > div must be class="datagrid"
+*/
+
 .datagrid table {
     border-collapse: collapse;
     text-align: left; width: 100%;
