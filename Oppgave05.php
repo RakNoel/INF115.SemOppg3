@@ -40,11 +40,12 @@ include 'menu.php';
             <tbody>
 
             <?php
-            //echo "Connected successfully";
+            //This is hopefully self explanatory.
             $serverQuery = 'SELECT DISTINCT `title` FROM `titles`;';
 
             $quarryRes = $conn->query($serverQuery);
 
+            //Print all results into a table
             if ($quarryRes->num_rows > 0) {
                 foreach ($quarryRes as $i => $row) {
                     if ($i % 2 == 0) {
@@ -58,7 +59,7 @@ include 'menu.php';
                 }
             } else {
                 $conn->close();
-                die();
+                die("No responce");
             }
 
 

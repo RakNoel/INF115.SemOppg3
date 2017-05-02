@@ -43,7 +43,7 @@ include 'menu.php';
             <tbody>
 
             <?php
-            //echo "Connected successfully";
+            //A large SQL to select the requested information
             $serverQuery = '
                 SELECT
                 DEP.`dept_name` AS Department,
@@ -69,6 +69,7 @@ include 'menu.php';
 
             $quarryRes = $conn->query($serverQuery);
 
+            //Print result
             if ($quarryRes->num_rows > 0) {
                 foreach ($quarryRes as $i => $row) {
                     if ($i % 2 == 0) {

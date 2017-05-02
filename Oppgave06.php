@@ -42,12 +42,13 @@ include 'menu.php';
             <tbody>
 
             <?php
-            //echo "Connected successfully";
+            //This was a hassle! The quarry is ok, but the response? DAMN
             $serverQuery = 'SHOW FULL TABLES FROM ' . $dbName;
 
             $quarryRes = $conn->query($serverQuery);
 
             if ($quarryRes->num_rows > 0) {
+                //Apparently this was a 2D-array, took me a while
                 for ($i = 0; $i < $quarryRes->num_rows; $i++){
                         $row = $quarryRes->fetch_row();
 

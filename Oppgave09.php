@@ -42,6 +42,7 @@ include 'menu.php';
             <tbody>
 
             <?php
+            //A easy quarry, but to make the page as fast as possible, i do only print the results...
             $serverQuery = '
                 SELECT `gender`, COUNT(`emp_no`) AS Number,
                 floor((YEAR(`birth_date`) / 10))*10 AS Decade
