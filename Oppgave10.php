@@ -40,7 +40,7 @@ include 'menu.php';
                 $yearReq = $_GET["year"];
                 $calcType = $_GET["type"];
 
-                /*
+                /**
                  * My absolute beast of a SQL quarry EVER, but im proud i made it^^
                  * I am unsure how to handle the arrays with to_date = 9999.01.01.
                  * but the task did not specify enough so i have overlooked them.
