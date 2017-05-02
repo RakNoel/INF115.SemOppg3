@@ -4,6 +4,7 @@
 function radioCheck(){
     var no = document.getElementsByName("no");
     var en = document.getElementsByName("en");
+    var de = document.getElementsByName("de");
 
-    return (no.checked || en.checked);
+    return (no.checked || en.checked || de.checked);
 }

@@ -30,7 +30,8 @@ include 'menu.php';
         <table>
             <tbody>
             <tr>
-                <td><input type="radio" name="lang" id="no" checked="checked" align="center" style="margin: 10px;" value="no"></td>
+                <td><input type="radio" name="lang" id="no" checked="checked" align="center" style="margin: 10px;"
+                           value="no"></td>
                 <td><label for="no">Norwegian</label></td>
             </tr>
             <tr class="alt">
@@ -41,7 +42,9 @@ include 'menu.php';
                 <td><input type="radio" name="lang" id="de" align="center" style="margin: 10px;" value="de"></td>
                 <td><label for="de">German</label></td>
             </tr>
-            <tr><td colspan="2"><input type="submit" style="width: 100%" name="sub"></td></tr>
+            <tr>
+                <td colspan="2"><input type="submit" style="width: 100%" name="sub"></td>
+            </tr>
             </tbody>
         </table>
     </form>

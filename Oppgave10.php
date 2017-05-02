@@ -98,7 +98,7 @@ include 'menu.php';
     <form action="Oppgave10.php" method="get" style="width: 100%">
         <input type="number" placeholder="Choose year" name="year" id="year"
                value="<?php if (isset($_GET["year"])) {
-                   echo $_GET["year"]; //This is so the year wont dissapear on reload
+                   echo $_GET["year"]; //This is so the year wont disappear on reload
                } ?>">
         <table>
             <tbody>

@@ -61,20 +61,3 @@ function checkCredentials() {
 
     return retVal;
 }
-
-function clearThisDoc() {
-    var age, name, year;
-    var okColor = "#FFF";
-
-    age = document.getElementById("age");
-    name = document.getElementById("name");
-    year = document.getElementById("year");
-
-    age.value = "";
-    name.value = "";
-    year.value = "";
-
-    year.style.backgroundColor = okColor;
-    name.style.backgroundColor = okColor;
-    age.style.backgroundColor = okColor;
-}
